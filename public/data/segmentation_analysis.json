@@ -1,626 +1,1249 @@
 {
-  "Central Africa": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Global": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     },
     "By Region": {
-      "Central Africa": {
-        "Cameroon": {},
-        "Gabon": {},
-        "Equatorial Guinea": {},
-        "Chad": {},
-        "Central African Republic": {},
-        "Republic of the Congo": {},
-        "Angola": {},
-        "Rest of Central Africa": {}
+      "North America": {},
+      "Latin America": {},
+      "Europe": {},
+      "Asia Pacific (excluding India)": {},
+      "Middle East": {},
+      "Africa": {},
+      "India": {
+        "North India": {
+          "Punjab": {},
+          "Haryana": {},
+          "Rajasthan": {},
+          "Rest of North India": {}
+        },
+        "South India": {
+          "Andhra Pradesh": {},
+          "Telangana": {},
+          "Tamil Nadu": {},
+          "Kerala": {},
+          "Karnataka": {},
+          "Rest of South India": {}
+        },
+        "East India": {
+          "West Bengal": {},
+          "Odisha": {}
+        },
+        "Assam": {
+          "Jharkhand": {},
+          "Rest of East India": {}
+        },
+        "West": {
+          "Maharashtra": {},
+          "Gujarat": {},
+          "Madhya Pradesh": {},
+          "Rest of West India": {}
+        }
       }
     }
   },
-  "Cameroon": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "North America": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Gabon": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Latin America": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Equatorial Guinea": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Europe": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Chad": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Asia Pacific (excluding India)": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Central African Republic": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Middle East": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Republic of the Congo": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "Africa": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Angola": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
-    },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   },
-  "Rest of Central Africa": {
-    "By Offering": {
-      "Software": {
-        "Reservation & Booking Management Software": {},
-        "Operations & Inventory Management Software": {},
-        "Revenue & Commercial Management Software": {},
-        "Analytics & Intelligence Software": {}
-      },
-      "Services": {
-        "Professional & Implementation Services": {},
-        "Managed & Support Services": {},
-        "Consulting & Advisory Services": {}
-      }
+  "North India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Deployment Model": {
-      "Cloud-based": {},
-      "On-premise": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
     },
-    "By Booking Channel": {
-      "Direct Booking Channels": {},
-      "Third-party Aggregator Channels": {},
-      "API & Partner Distribution Channels": {}
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
     },
-    "By Revenue Model": {
-      "Commission-Based Model": {},
-      "Subscription-Based Model": {},
-      "Transaction Fee Model": {},
-      "Freemium Model": {},
-      "Enterprise Licensing Model": {}
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
     },
-    "By Organization Size": {
-      "Small Businesses": {},
-      "Medium-sized Businesses": {},
-      "Large Enterprises": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Punjab": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
     },
-    "By Booking Type": {
-      "Accommodation Booking": {
-        "Hotel Room Booking": {},
-        "Resort Booking": {},
-        "Vacation Rental Booking": {},
-        "Hostel & Guesthouse Booking": {},
-        "Others (Serviced Apartment Booking, etc.)": {}
-      },
-      "Food Service Booking": {
-        "Restaurant Table Reservation Booking": {},
-        "Café Reservation Booking": {},
-        "Others (Banquet & Dining Reservation Booking, etc.)": {}
-      },
-      "Travel & Transportation Booking": {
-        "Airline Ticket Booking": {},
-        "Tour & Activity Booking": {},
-        "Cruise Booking": {},
-        "Others (Vehicle Rental Booking, etc.)": {}
-      },
-      "Healthcare & Wellness Booking": {
-        "Diagnostic Appointment Booking": {},
-        "Spa & Wellness Booking": {},
-        "Others (Fitness Session Booking, etc.)": {}
-      },
-      "Entertainment & Event Booking": {
-        "Event Ticket Booking": {},
-        "Cinema & Theatre Booking": {},
-        "Theme Park Booking": {},
-        "Others (Venue Reservation Booking, etc.)": {}
-      },
-      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Haryana": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Rajasthan": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Rest of North India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "South India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Andhra Pradesh": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Telangana": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Tamil Nadu": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Kerala": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Karnataka": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Rest of South India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "East India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "West Bengal": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Odisha": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Assam": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Jharkhand": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Rest of East India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "West": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Maharashtra": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Gujarat": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Madhya Pradesh": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
+    }
+  },
+  "Rest of West India": {
+    "By Source": {
+      "Olive": {},
+      "Ginger": {},
+      "Turmeric": {},
+      "Patchouli (Pacholi)": {},
+      "Cardamom": {},
+      "Black Pepper": {},
+      "Clove": {},
+      "Cinnamon": {},
+      "Cumin": {},
+      "Other Spices & Herbs": {}
+    },
+    "By Product Form": {
+      "Concentrated Extract": {},
+      "Powdered Extract (Spray Dried / Microencapsulated)": {},
+      "Liquid / Oil Extract": {}
+    },
+    "By Extraction Method": {
+      "Solvent Extraction": {},
+      "Cold Pressed / Mechanical Extraction": {},
+      "Supercritical Fluid Extraction": {},
+      "Steam Distillation": {},
+      "Enzyme-Assisted Extraction": {}
+    },
+    "By End-Use Industry": {
+      "Food & Beverages": {},
+      "Nutraceuticals & Dietary Supplements": {},
+      "Pharmaceuticals": {},
+      "Cosmetics & Personal Care": {},
+      "Animal Feed & Pet Food": {},
+      "Fragrance & Perfumery": {},
+      "Other Industry": {}
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (Distributors, etc.)": {}
     }
   }
 }

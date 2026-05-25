@@ -1,48 +1,24 @@
 export interface CustomerIntelligenceRow {
   sNo: number | string
   customerCompanyName: string
-  typeOfBusiness: string
-  primaryApplicationType: string
-  platformType: string
-  numberOfPropertiesManaged: string
-  numberOfBookingsProcessed: string
-  keyContactPerson: string
-  designationRole: string
-  emailAddress: string
-  phoneWhatsappNumber: string
-  linkedInProfile: string
-  websiteUrl: string
-  annualOnlineBookingSoftwareBudget?: string
-  preferredBookingModel?: string
-  averageImplementationTimeline?: string
-  currentBookingSoftwareUsageDuration?: string
-  keyPurchaseDrivers?: string
-  levelOfRenderingAutomation?: string
-  percentageOfProjectsUsingCloudRendering?: string
-  useOfAiOrGenerativeRenderingTools?: string
-  renderingWorkflowOptimizationToolsAdoption?: string
-  remoteCollaborationCloudRenderingCapability?: string
-  plannedRenderingCapacityExpansion?: string
-  expectedNewRenderingProjects?: string
-  newApplicationAreasPlanned?: string
-  newStudioOfficeExpansionPlanned?: string
-  customerBenchmarkingSummary?: string
-  additionalCommentsNotesByCmiTeam?: string
-  levelOfBookingAutomation?: string
-  percentageOfOnlineVsOfflineBookings?: string
-  useOfAiOrDynamicPricingTools?: string
-  integrationWithPaymentGatewaysPmsCrmOta?: string
-  mobileAppBookingCapability?: string
-  plannedExpansionOfBookingCapabilities?: string
-  expectedBookingVolumeGrowth?: string
-  newFeaturesPlanned?: string
-  customerSegmentsServed?: string
+  headquartersLocation: string
+  manufacturingProcessProfile: string
+  keyPersonEmail: string
+  tel: string
+  mobile: string
+  website: string
+  linkedIn: string
+  productTypesConsumed: string
+  supplyModeAndSourcing: string
+  estimatedVolumeDemand: string
+  estimatedPurchaseValue: string
+  productWiseDemandSplit: string
+  procurementPattern: string
 }
 
-export interface CustomerIntelligenceProposition {
+export interface CustomerIntelligenceMarket {
   id: string
   label: string
-  titleLines: string[]
   rows: CustomerIntelligenceRow[]
 }
 
@@ -50,9 +26,15 @@ export interface CustomerIntelligenceData {
   marketTitle: string
   subtitle: string
   entityNote: string
-  proposition1: CustomerIntelligenceProposition
-  proposition2: CustomerIntelligenceProposition
-  proposition3: CustomerIntelligenceProposition
+  markets: CustomerIntelligenceMarket[]
+}
+
+/** @deprecated Use markets-based structure */
+export interface CustomerIntelligenceProposition {
+  id: string
+  label: string
+  titleLines: string[]
+  rows: CustomerIntelligenceRow[]
 }
 
 export interface TableColumnGroup {
@@ -70,132 +52,79 @@ export interface TableColumn {
 }
 
 export const CUSTOMER_INFO_COLUMNS: TableColumn[] = [
-  { key: 'customerCompanyName', label: 'Customer Name/Company Name', headerClass: 'bg-[#FFF8DC]', minWidth: '180px' },
-  { key: 'typeOfBusiness', label: 'Type of Business', headerClass: 'bg-[#FFF8DC]', minWidth: '150px' },
-  { key: 'primaryApplicationType', label: 'Primary Application Type', headerClass: 'bg-[#FFF8DC]', minWidth: '170px' },
-  { key: 'platformType', label: 'Platform Type', headerClass: 'bg-[#FFF8DC]', minWidth: '130px' },
   {
-    key: 'numberOfPropertiesManaged',
-    label: 'Number of Properties/Hotels/Travel Services Managed',
+    key: 'customerCompanyName',
+    label: 'Customer Name/Company Name',
     headerClass: 'bg-[#FFF8DC]',
-    minWidth: '220px',
+    minWidth: '200px',
+  },
+]
+
+export const COMPANY_PROFILE_COLUMNS: TableColumn[] = [
+  {
+    key: 'headquartersLocation',
+    label: "Headquarter's Location",
+    headerClass: 'bg-[#FFF8DC]',
+    minWidth: '180px',
   },
   {
-    key: 'numberOfBookingsProcessed',
-    label: 'Number of Daily/Monthly Bookings Processed',
+    key: 'manufacturingProcessProfile',
+    label: 'Manufacturing / process profile and key product applications',
     headerClass: 'bg-[#FFF8DC]',
-    minWidth: '220px',
+    minWidth: '280px',
   },
 ]
 
 export const CONTACT_COLUMNS: TableColumn[] = [
-  { key: 'keyContactPerson', label: 'Key Contact Person', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
-  { key: 'designationRole', label: 'Designation/Role', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
-  { key: 'emailAddress', label: 'Email Address', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'email' },
-  { key: 'phoneWhatsappNumber', label: 'Phone/WhatsApp Number', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
-  { key: 'linkedInProfile', label: 'LinkedIn Profile', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'url' },
-  { key: 'websiteUrl', label: 'Website URL', headerClass: 'bg-[#B0E0E6]', minWidth: '130px', isLink: 'url' },
+  {
+    key: 'keyPersonEmail',
+    label: 'Key Person Email',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '160px',
+    isLink: 'email',
+  },
+  { key: 'tel', label: 'Tel', headerClass: 'bg-[#B0E0E6]', minWidth: '120px' },
+  { key: 'mobile', label: 'Mobile', headerClass: 'bg-[#B0E0E6]', minWidth: '120px' },
+  { key: 'website', label: 'Website', headerClass: 'bg-[#B0E0E6]', minWidth: '140px', isLink: 'url' },
+  { key: 'linkedIn', label: 'LinkedIn', headerClass: 'bg-[#B0E0E6]', minWidth: '140px', isLink: 'url' },
 ]
 
-export const PROCUREMENT_COLUMNS: TableColumn[] = [
+export const PRODUCT_PROCUREMENT_COLUMNS: TableColumn[] = [
   {
-    key: 'annualOnlineBookingSoftwareBudget',
-    label: 'Annual Online Booking Software Budget (US$)',
+    key: 'productTypesConsumed',
+    label: 'Product types consumed (Oleoresin, Powder, Oil) and source/raw material preference',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '220px',
+    minWidth: '300px',
   },
   {
-    key: 'preferredBookingModel',
-    label: 'Preferred Booking Model (Cloud-Based / On-Premise / Hybrid)',
+    key: 'supplyModeAndSourcing',
+    label: 'Supply Mode used and current sourcing / supplier pattern',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '260px',
   },
   {
-    key: 'averageImplementationTimeline',
-    label: 'Average Implementation Timeline (Weeks)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-  {
-    key: 'currentBookingSoftwareUsageDuration',
-    label: 'Current Booking Software & Usage Duration (Years)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '240px',
-  },
-  {
-    key: 'keyPurchaseDrivers',
-    label: 'Key Purchase Drivers (Automation, Customer Experience, Mobile Booking, Channel Integration, AI Features)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '280px',
-  },
-]
-
-export const DIGITAL_ADOPTION_P3_COLUMNS: TableColumn[] = [
-  {
-    key: 'levelOfBookingAutomation',
-    label: 'Level of Booking Automation (Manual / Semi-Automated / Fully Automated)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '240px',
-  },
-  {
-    key: 'percentageOfOnlineVsOfflineBookings',
-    label: 'Percentage of Online vs Offline Bookings',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-  {
-    key: 'useOfAiOrDynamicPricingTools',
-    label: 'Use of AI or Dynamic Pricing Tools (Yes or No)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '220px',
-  },
-  {
-    key: 'integrationWithPaymentGatewaysPmsCrmOta',
-    label: 'Integration with Payment Gateways / PMS / CRM / OTA Platforms',
+    key: 'estimatedVolumeDemand',
+    label: 'Estimated monthly / annual volume demand (Tons/month, Tons/year)',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '260px',
   },
   {
-    key: 'mobileAppBookingCapability',
-    label: 'Mobile App Booking Capability (Yes or No)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-]
-
-export const FUTURE_DEMAND_P3_COLUMNS: TableColumn[] = [
-  {
-    key: 'plannedExpansionOfBookingCapabilities',
-    label: 'Planned Expansion of Booking Capabilities in Next 3 Years (%)',
+    key: 'estimatedPurchaseValue',
+    label: 'Estimated monthly / annual purchase value (INR Cr. / US$ Mn)',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '260px',
   },
   {
-    key: 'expectedBookingVolumeGrowth',
-    label: 'Expected Booking Volume Growth in Next 3 Years',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '220px',
-  },
-  {
-    key: 'newFeaturesPlanned',
-    label: 'New Features Planned (AI Chatbot, Dynamic Packaging, Loyalty Programs, Multi-Language Support)',
+    key: 'productWiseDemandSplit',
+    label: 'Product-wise demand split and multi-product consumption profile',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '280px',
   },
   {
-    key: 'customerSegmentsServed',
-    label: 'Customer Segments Served (Leisure, Corporate, Group Travel, Medical Tourism, etc.)',
+    key: 'procurementPattern',
+    label: 'Procurement pattern (Direct vs Distributor, Contract vs Spot, Refill cycle & delivery expectation)',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '260px',
-  },
-]
-
-export const CMI_INSIGHTS_P3_COLUMNS: TableColumn[] = [
-  {
-    key: 'additionalCommentsNotesByCmiTeam',
-    label: 'Additional Comments/Notes by CMI Team',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '220px',
+    minWidth: '320px',
   },
 ]
 
@@ -204,40 +133,57 @@ export type PropositionTableConfig = {
   columns: TableColumn[]
 }
 
+export const MARKET_TABLE_CONFIG: PropositionTableConfig = {
+  groups: [
+    { label: 'Customer Information', colSpan: 1, headerClass: 'bg-[#E8C4A0]' },
+    { label: 'Company Profile', colSpan: 2, headerClass: 'bg-[#E8C4A0]' },
+    { label: 'Contact Details', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
+    { label: 'Product & Procurement Intelligence', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
+  ],
+  columns: [
+    ...CUSTOMER_INFO_COLUMNS,
+    ...COMPANY_PROFILE_COLUMNS,
+    ...CONTACT_COLUMNS,
+    ...PRODUCT_PROCUREMENT_COLUMNS,
+  ],
+}
+
+/** @deprecated Use MARKET_TABLE_CONFIG */
 export const PROPOSITION_TABLE_CONFIG: Record<'proposition1' | 'proposition2' | 'proposition3', PropositionTableConfig> = {
-  proposition1: {
-    groups: [
-      { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-    ],
-    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS],
-  },
-  proposition2: {
-    groups: [
-      { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Procurement & Purchase Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
-    ],
-    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...PROCUREMENT_COLUMNS],
-  },
-  proposition3: {
-    groups: [
-      { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Procurement & Purchase Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Digital & Technology Adoption Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Future Demand & Expansion Metrics', colSpan: 4, headerClass: 'bg-[#87CEEB]' },
-      { label: 'CMI Insights', colSpan: 1, headerClass: 'bg-[#87CEEB]' },
-    ],
-    columns: [
-      ...CUSTOMER_INFO_COLUMNS,
-      ...CONTACT_COLUMNS,
-      ...PROCUREMENT_COLUMNS,
-      ...DIGITAL_ADOPTION_P3_COLUMNS,
-      ...FUTURE_DEMAND_P3_COLUMNS,
-      ...CMI_INSIGHTS_P3_COLUMNS,
-    ],
-  },
+  proposition1: MARKET_TABLE_CONFIG,
+  proposition2: MARKET_TABLE_CONFIG,
+  proposition3: MARKET_TABLE_CONFIG,
+}
+
+export const END_USE_MARKETS = [
+  'Food & Beverages',
+  'Nutraceuticals & Dietary Supplements',
+  'Pharmaceuticals',
+  'Cosmetics & Personal Care',
+  'Animal Feed & Pet Food',
+  'Fragrance & Perfumery',
+  'Other Industry',
+] as const
+
+export function createPlaceholderRow(sNo: number | string, customerName: string): CustomerIntelligenceRow {
+  const placeholder = 'xx'
+  return {
+    sNo,
+    customerCompanyName: customerName,
+    headquartersLocation: placeholder,
+    manufacturingProcessProfile: placeholder,
+    keyPersonEmail: placeholder,
+    tel: placeholder,
+    mobile: placeholder,
+    website: placeholder,
+    linkedIn: placeholder,
+    productTypesConsumed: placeholder,
+    supplyModeAndSourcing: placeholder,
+    estimatedVolumeDemand: placeholder,
+    estimatedPurchaseValue: placeholder,
+    productWiseDemandSplit: placeholder,
+    procurementPattern: placeholder,
+  }
 }
 
 export async function loadCustomerIntelligenceData(): Promise<CustomerIntelligenceData> {
@@ -245,5 +191,33 @@ export async function loadCustomerIntelligenceData(): Promise<CustomerIntelligen
   if (!response.ok) {
     throw new Error('Failed to load customer intelligence data')
   }
-  return response.json()
+  const raw = await response.json()
+
+  // Support legacy proposition-based JSON during migration
+  if (raw.markets && Array.isArray(raw.markets)) {
+    return raw as CustomerIntelligenceData
+  }
+
+  return migrateLegacyCustomerIntelligenceData(raw)
+}
+
+function migrateLegacyCustomerIntelligenceData(raw: Record<string, unknown>): CustomerIntelligenceData {
+  const legacyRows =
+    (raw.proposition1 as { rows?: CustomerIntelligenceRow[] } | undefined)?.rows ?? []
+  return {
+    marketTitle: String(raw.marketTitle ?? 'Oleoresins Market - Customer Database'),
+    subtitle: String(raw.subtitle ?? 'Verified directory and insight on customers'),
+    entityNote: String(raw.entityNote ?? ''),
+    markets: END_USE_MARKETS.map((label, index) => ({
+      id: `market-${index + 1}`,
+      label,
+      rows:
+        index === 0
+          ? legacyRows.slice(0, 4).map((row, i) => ({
+              ...createPlaceholderRow(row.sNo ?? i + 1, row.customerCompanyName || `Customer ${i + 1}`),
+              ...row,
+            }))
+          : [1, 2, 3].map((n) => createPlaceholderRow(n, `Customer ${n}`)),
+    })),
+  }
 }

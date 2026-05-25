@@ -21,6 +21,8 @@ export interface GeographyDimension {
   global: string[];
   regions: string[];
   countries: Record<string, string[]>;
+  /** Nested sub-regions (e.g. India -> North India -> Punjab) */
+  sub_regions?: Record<string, Record<string, string[]>>;
   all_geographies: string[];
 }
 

@@ -3,7 +3,11 @@
  * Defines the grouping of charts for different analytical perspectives
  */
 
-export type ChartGroupId = 'market-analysis' | 'coherent-opportunity' | 'customer-intelligence'
+export type ChartGroupId =
+  | 'market-analysis'
+  | 'coherent-opportunity'
+  | 'customer-intelligence'
+  | 'distributor-intelligence'
 
 export interface ChartGroup {
   id: ChartGroupId
@@ -31,9 +35,16 @@ export const CHART_GROUPS: ChartGroup[] = [
   {
     id: 'customer-intelligence',
     label: 'Customer Intelligence',
-    description: 'Customer database with proposition tables',
+    description: 'Customer database by end-use industry',
     charts: ['customer-intelligence-database'],
     icon: '👥'
+  },
+  {
+    id: 'distributor-intelligence',
+    label: 'Distributor Intelligence',
+    description: 'Distributor directory and commercial profile',
+    charts: ['distributor-intelligence-database'],
+    icon: '🚚'
   }
 ]
 

@@ -154,12 +154,20 @@ export function GlobalKPICards() {
     // Get market name from metadata
     const marketName = data.metadata.market_name || 'Market'
 
-    const geographyLabel =
-      displayGeographies.length === 0
-        ? marketName
-        : displayGeographies.length === 1
-          ? `${displayGeographies[0]} ${marketName}`
-          : `${displayGeographies.length} Geographies ${marketName}`
+    const geographyLabel = (() => {
+      if (displayGeographies.length === 0) return marketName
+      if (displayGeographies.length === 1) {
+        const geo = displayGeographies[0]
+        const marketLower = marketName.toLowerCase()
+        const geoLower = geo.toLowerCase()
+        // Avoid "India India & ..." when market name already starts with the selected geography
+        if (marketLower.startsWith(geoLower)) {
+          return marketName
+        }
+        return `${geo} ${marketName}`
+      }
+      return `${displayGeographies.length} Geographies | ${marketName}`
+    })()
     const segmentTypeLabel = targetSegmentType || 'All Segments'
 
     return {

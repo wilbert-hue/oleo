@@ -1267,39 +1267,85 @@ export async function processJsonDataAsync(
     }
 
     // Extract regions AND countries from "By Region" segment type as additional geographies
-    // This builds a full geography hierarchy: Global > Regions > Countries
+    // This builds a full geography hierarchy: Global > Regions > Countries/Sub-regions > States
     const regionGeographies: string[] = []
     const regionToCountries: Record<string, string[]> = {}
+    const subRegions: Record<string, Record<string, string[]>> = {}
     const allCountries: string[] = []
+    const isMetadataKey = (key: string) =>
+      /^\d{4}$/.test(key) || key === 'CAGR' || key === '_aggregated' || key === '_level'
+
+    const collectNestedGeographies = (
+      node: Record<string, unknown>,
+      regionName: string,
+      depth: number
+    ) => {
+      const keys = Object.keys(node).filter((key) => !isMetadataKey(key))
+      const childKeys = keys.filter((key) => {
+        const val = node[key]
+        return val && typeof val === 'object' && !Array.isArray(val)
+      })
+
+      if (depth === 1) {
+        if (!regionToCountries[regionName]) {
+          regionToCountries[regionName] = []
+        }
+        childKeys.forEach((child) => {
+          if (!regionToCountries[regionName].includes(child)) {
+            regionToCountries[regionName].push(child)
+          }
+          if (!allCountries.includes(child)) {
+            allCountries.push(child)
+          }
+        })
+      }
+
+      childKeys.forEach((child) => {
+        const childNode = node[child] as Record<string, unknown>
+        const grandchildKeys = Object.keys(childNode).filter((key) => !isMetadataKey(key))
+        const hasNestedObjects = grandchildKeys.some((key) => {
+          const val = childNode[key]
+          return val && typeof val === 'object' && !Array.isArray(val)
+        })
+
+        if (hasNestedObjects) {
+          if (!subRegions[regionName]) {
+            subRegions[regionName] = {}
+          }
+          if (!subRegions[regionName][child]) {
+            subRegions[regionName][child] = []
+          }
+          grandchildKeys.forEach((state) => {
+            const val = childNode[state]
+            if (val && typeof val === 'object' && !Array.isArray(val)) {
+              if (!subRegions[regionName][child].includes(state)) {
+                subRegions[regionName][child].push(state)
+              }
+              if (!allCountries.includes(state)) {
+                allCountries.push(state)
+              }
+            }
+          })
+        }
+      })
+    }
+
     for (const topGeo of geographies) {
       const geoData = structureData[topGeo]
       if (geoData && typeof geoData === 'object') {
-        // Look for "By Region" segment type
         const byRegionData = geoData['By Region']
         if (byRegionData && typeof byRegionData === 'object') {
-          // Extract region names (first level keys under "By Region")
-          const regions = Object.keys(byRegionData).filter(key => {
+          const regions = Object.keys(byRegionData).filter((key) => {
             const value = byRegionData[key]
             return value && typeof value === 'object' && !Array.isArray(value)
           })
-          regions.forEach(region => {
+          regions.forEach((region) => {
             if (!regionGeographies.includes(region)) {
               regionGeographies.push(region)
             }
-            // Extract countries under each region (second level keys, excluding the region name itself)
             const regionData = byRegionData[region]
             if (regionData && typeof regionData === 'object') {
-              const countries = Object.keys(regionData).filter(key => {
-                return key !== region && typeof regionData[key] === 'object' && !Array.isArray(regionData[key])
-              })
-              if (countries.length > 0) {
-                regionToCountries[region] = countries
-                countries.forEach(country => {
-                  if (!allCountries.includes(country)) {
-                    allCountries.push(country)
-                  }
-                })
-              }
+              collectNestedGeographies(regionData as Record<string, unknown>, region, 1)
             }
           })
         }
@@ -1365,6 +1411,7 @@ export async function processJsonDataAsync(
       global: uniqueGeographies.filter(g => !regionGeographies.includes(g) && !allCountries.includes(g)),
       regions: regionGeographies,
       countries: regionToCountries,
+      sub_regions: Object.keys(subRegions).length > 0 ? subRegions : undefined,
       all_geographies: uniqueGeographies
     }
 
@@ -1473,9 +1520,9 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'Central Africa Online Booking Software Market',
+      market_name: 'India & Global Botanical Ingredients Market',
       market_type: 'Market Analysis',
-      industry: 'Travel & Hospitality Technology',
+      industry: 'Food & Agriculture',
       years: allYears,
       start_year: startYear,
       base_year: baseYear,
@@ -1483,8 +1530,8 @@ export async function processJsonDataAsync(
       historical_years: allYears.filter(y => y <= historicalEndYear),
       forecast_years: allYears.filter(y => y > historicalEndYear),
       currency: 'USD',
-      value_unit: 'Million',
-      volume_unit: 'Million Units',
+      value_unit: 'US$ Mn',
+      volume_unit: 'Tons',
       has_value: valueRecords.length > 0,
       has_volume: volumeRecords.length > 0,
     }

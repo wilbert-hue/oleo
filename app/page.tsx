@@ -13,6 +13,7 @@ import { WaterfallChart } from '@/components/charts/WaterfallChart'
 import { D3BubbleChartIndependent } from '@/components/charts/D3BubbleChartIndependent'
 import { CompetitiveIntelligence } from '@/components/charts/CompetitiveIntelligence'
 import CustomerIntelligenceDatabase from '@/components/charts/CustomerIntelligenceDatabase'
+import DistributorIntelligenceDatabase from '@/components/charts/DistributorIntelligenceDatabase'
 import { InsightsPanel } from '@/components/InsightsPanel'
 import { FilterPresets } from '@/components/filters/FilterPresets'
 import { ChartGroupSelector } from '@/components/filters/ChartGroupSelector'
@@ -28,9 +29,21 @@ export default function DashboardPage() {
   const router = useRouter()
   const { setData, setLoading, setError, data, isLoading, error, filters, selectedChartGroup, dashboardName } = useDashboardStore()
   const isCustomerIntelligenceView = selectedChartGroup === 'customer-intelligence'
+  const isDistributorIntelligenceView = selectedChartGroup === 'distributor-intelligence'
+  const isIntelligenceView = isCustomerIntelligenceView || isDistributorIntelligenceView
   const [mounted, setMounted] = useState(false)
   const [hasCheckedStore, setHasCheckedStore] = useState(false)
-  const [activeTab, setActiveTab] = useState<'bar' | 'line' | 'heatmap' | 'table' | 'waterfall' | 'bubble' | 'competitive-intelligence' | 'customer-intelligence-database'>('bar')
+  const [activeTab, setActiveTab] = useState<
+    | 'bar'
+    | 'line'
+    | 'heatmap'
+    | 'table'
+    | 'waterfall'
+    | 'bubble'
+    | 'competitive-intelligence'
+    | 'customer-intelligence-database'
+    | 'distributor-intelligence-database'
+  >('bar')
   const [showInsights, setShowInsights] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [viewMode, setViewMode] = useState<'tabs' | 'vertical'>('tabs')
@@ -53,7 +66,8 @@ export default function DashboardPage() {
     'waterfall': 'waterfall',
     'bubble': 'bubble',
     'competitive-intelligence': 'competitive-intelligence',
-    'customer-intelligence-database': 'customer-intelligence-database'
+    'customer-intelligence-database': 'customer-intelligence-database',
+    'distributor-intelligence-database': 'distributor-intelligence-database',
   }
 
   // Auto-switch to first available tab when chart group changes
@@ -202,7 +216,7 @@ export default function DashboardPage() {
                 Coherent Dashboard
               </h1>
               <h2 className="text-sm text-black">
-                {dashboardName || 'Central Africa Online Booking Software Market'}
+                {dashboardName || 'India & Global Botanical Ingredients Market'}
               </h2>
             </div>
           </div>
@@ -210,7 +224,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Global KPI Cards */}
-        {!isCustomerIntelligenceView && (
+        {!isIntelligenceView && (
           <div className="mb-6 space-y-4">
             <GlobalKPICards />
             <div className="flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
@@ -254,7 +268,7 @@ export default function DashboardPage() {
                   <CustomScrollbar containerRef={sidebarScrollRef}>
                     <div ref={sidebarScrollRef} className="overflow-y-auto pr-6 space-y-3 sidebar-scroll max-h-[calc(100vh-6rem)]">
                       <ChartGroupSelector />
-                      {!isCustomerIntelligenceView && (
+                      {!isIntelligenceView && (
                         <>
                           <FilterPresets />
                           <EnhancedFilterPanel />
@@ -396,6 +410,18 @@ export default function DashboardPage() {
                             👥 Customer Intelligence
                           </button>
                         )}
+                        {isChartVisible('distributor-intelligence-database') && (
+                          <button
+                            onClick={() => setActiveTab('distributor-intelligence-database')}
+                            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+                              activeTab === 'distributor-intelligence-database'
+                                ? 'border-blue-500 text-blue-600'
+                                : 'border-transparent text-black hover:text-black hover:border-gray-300'
+                            }`}
+                          >
+                            🚚 Distributor Intelligence
+                          </button>
+                        )}
                       </>
                     )}
                   </nav>
@@ -491,6 +517,12 @@ export default function DashboardPage() {
                         <CustomerIntelligenceDatabase />
                       </div>
                     )}
+
+                    {activeTab === 'distributor-intelligence-database' && (
+                      <div id="distributor-intelligence-database-chart" className="p-4">
+                        <DistributorIntelligenceDatabase />
+                      </div>
+                    )}
                   </>
                 ) : (
                   <div className="space-y-8">
@@ -566,6 +598,13 @@ export default function DashboardPage() {
                       <div className="border-b pb-8">
                         <h3 className="text-lg font-semibold text-black mb-4">👥 Customer Intelligence</h3>
                         <CustomerIntelligenceDatabase />
+                      </div>
+                    )}
+
+                    {isChartVisible('distributor-intelligence-database') && (
+                      <div className="border-b pb-8">
+                        <h3 className="text-lg font-semibold text-black mb-4">🚚 Distributor Intelligence</h3>
+                        <DistributorIntelligenceDatabase />
                       </div>
                     )}
                   </div>

@@ -3,13 +3,12 @@
 import { useEffect, useState } from 'react'
 import { ChevronDown, ChevronUp, Info } from 'lucide-react'
 import {
-  loadCustomerIntelligenceData,
-  MARKET_TABLE_CONFIG,
-  type CustomerIntelligenceData,
-  type CustomerIntelligenceMarket,
-  type CustomerIntelligenceRow,
+  loadDistributorIntelligenceData,
+  DISTRIBUTOR_TABLE_CONFIG,
+  type DistributorIntelligenceData,
+  type DistributorIntelligenceRow,
   type TableColumn,
-} from '@/lib/utility-customer-intelligence-data'
+} from '@/lib/utility-distributor-intelligence-data'
 
 interface AccordionSectionProps {
   title: string
@@ -60,8 +59,8 @@ function renderCellValue(value: string, column: TableColumn) {
   return value
 }
 
-function MarketTable({ rows }: { rows: CustomerIntelligenceRow[] }) {
-  const config = MARKET_TABLE_CONFIG
+function DistributorTable({ rows }: { rows: DistributorIntelligenceRow[] }) {
+  const config = DISTRIBUTOR_TABLE_CONFIG
 
   return (
     <div className="overflow-x-auto">
@@ -113,27 +112,23 @@ function MarketTable({ rows }: { rows: CustomerIntelligenceRow[] }) {
   )
 }
 
-interface CustomerIntelligenceDatabaseProps {
+interface DistributorIntelligenceDatabaseProps {
   title?: string
   height?: number
 }
 
-export default function CustomerIntelligenceDatabase({ title }: CustomerIntelligenceDatabaseProps) {
-  const [data, setData] = useState<CustomerIntelligenceData | null>(null)
+export default function DistributorIntelligenceDatabase({ title }: DistributorIntelligenceDatabaseProps) {
+  const [data, setData] = useState<DistributorIntelligenceData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [openMarket, setOpenMarket] = useState<string>('market-1')
+  const [isTableOpen, setIsTableOpen] = useState(true)
 
   useEffect(() => {
-    loadCustomerIntelligenceData()
+    loadDistributorIntelligenceData()
       .then(setData)
       .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load data'))
       .finally(() => setLoading(false))
   }, [])
-
-  const toggleMarket = (id: string) => {
-    setOpenMarket((current) => (current === id ? '' : id))
-  }
 
   if (loading) {
     return (
@@ -146,12 +141,10 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
   if (error || !data) {
     return (
       <div className="rounded-lg border border-red-200 bg-red-50 p-6 text-red-700">
-        {error || 'Customer intelligence data unavailable'}
+        {error || 'Distributor intelligence data unavailable'}
       </div>
     )
   }
-
-  const markets: CustomerIntelligenceMarket[] = data.markets ?? []
 
   return (
     <div className="w-full">
@@ -168,16 +161,13 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
         </p>
       </div>
 
-      {markets.map((market) => (
-        <AccordionSection
-          key={market.id}
-          title={market.label}
-          isOpen={openMarket === market.id}
-          onToggle={() => toggleMarket(market.id)}
-        >
-          <MarketTable rows={market.rows} />
-        </AccordionSection>
-      ))}
+      <AccordionSection
+        title="Distributor Directory"
+        isOpen={isTableOpen}
+        onToggle={() => setIsTableOpen((open) => !open)}
+      >
+        <DistributorTable rows={data.rows} />
+      </AccordionSection>
     </div>
   )
 }
