@@ -1,49 +1,626 @@
 {
-  "Global": {
-    "By Reinforcement Material Type": {
-      "Glass Fiber Reinforced Polymer Poles": {},
-      "Hybrid Fiber Reinforced Polymer Poles": {},
-      "Other Advanced Composite Poles (Carbon Fiber, Basalt Fiber, Aramid Fiber, etc.)": {}
+  "Central Africa": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
     },
-    "By Structure Configuration": {
-      "Single-Pole Structures": {},
-      "H-Frame Structures": {},
-      "Multi-Pole Portal Structures": {}
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
     },
-    "By Support Method": {
-      "Self-Supporting Pole Structures": {},
-      "Guyed Pole Structures": {}
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
     },
-    "By Pole Line Function": {
-      "Tangent Utility Poles": {},
-      "Angle Utility Poles": {},
-      "Dead-End and Anchor Utility Poles": {},
-      "Terminal and Take-Off Utility Poles": {}
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
     },
-    "By High-Voltage Transmission Poles": {
-      "69 kV to 230 kV": {},
-      "Above 230 kV": {}
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
     },
-    "By Installation Type": {
-      "New Transmission Line Construction": {},
-      "Transmission Pole Replacement and Retrofit": {}
-    },
-    "By Operating Environment": {
-      "Normal Inland Transmission Corridors": {},
-      "Coastal and Corrosion-Prone Transmission Corridors": {},
-      "High-Wind and Storm-Prone Transmission Corridors": {},
-      "Wildfire-Prone Transmission Corridors": {},
-      "Remote and Difficult-Terrain Transmission Corridors": {}
-    },
-    "By Customer Type": {
-      "Electric Transmission Utilities": {},
-      "Transmission System Operators": {},
-      "EPC and Grid Infrastructure Contractors": {},
-      "Industrial Power Network Owners": {},
-      "Government and Public Transmission Agencies": {}
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
     },
     "By Region": {
-      "UK": {}
+      "Central Africa": {
+        "Cameroon": {},
+        "Gabon": {},
+        "Equatorial Guinea": {},
+        "Chad": {},
+        "Central African Republic": {},
+        "Republic of the Congo": {},
+        "Angola": {},
+        "Rest of Central Africa": {}
+      }
+    }
+  },
+  "Cameroon": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Gabon": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Equatorial Guinea": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Chad": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Central African Republic": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Republic of the Congo": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Angola": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
+    }
+  },
+  "Rest of Central Africa": {
+    "By Offering": {
+      "Software": {
+        "Reservation & Booking Management Software": {},
+        "Operations & Inventory Management Software": {},
+        "Revenue & Commercial Management Software": {},
+        "Analytics & Intelligence Software": {}
+      },
+      "Services": {
+        "Professional & Implementation Services": {},
+        "Managed & Support Services": {},
+        "Consulting & Advisory Services": {}
+      }
+    },
+    "By Deployment Model": {
+      "Cloud-based": {},
+      "On-premise": {}
+    },
+    "By Booking Channel": {
+      "Direct Booking Channels": {},
+      "Third-party Aggregator Channels": {},
+      "API & Partner Distribution Channels": {}
+    },
+    "By Revenue Model": {
+      "Commission-Based Model": {},
+      "Subscription-Based Model": {},
+      "Transaction Fee Model": {},
+      "Freemium Model": {},
+      "Enterprise Licensing Model": {}
+    },
+    "By Organization Size": {
+      "Small Businesses": {},
+      "Medium-sized Businesses": {},
+      "Large Enterprises": {}
+    },
+    "By Booking Type": {
+      "Accommodation Booking": {
+        "Hotel Room Booking": {},
+        "Resort Booking": {},
+        "Vacation Rental Booking": {},
+        "Hostel & Guesthouse Booking": {},
+        "Others (Serviced Apartment Booking, etc.)": {}
+      },
+      "Food Service Booking": {
+        "Restaurant Table Reservation Booking": {},
+        "Café Reservation Booking": {},
+        "Others (Banquet & Dining Reservation Booking, etc.)": {}
+      },
+      "Travel & Transportation Booking": {
+        "Airline Ticket Booking": {},
+        "Tour & Activity Booking": {},
+        "Cruise Booking": {},
+        "Others (Vehicle Rental Booking, etc.)": {}
+      },
+      "Healthcare & Wellness Booking": {
+        "Diagnostic Appointment Booking": {},
+        "Spa & Wellness Booking": {},
+        "Others (Fitness Session Booking, etc.)": {}
+      },
+      "Entertainment & Event Booking": {
+        "Event Ticket Booking": {},
+        "Cinema & Theatre Booking": {},
+        "Theme Park Booking": {},
+        "Others (Venue Reservation Booking, etc.)": {}
+      },
+      "Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)": {}
     }
   }
 }

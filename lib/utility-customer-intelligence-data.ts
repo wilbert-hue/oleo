@@ -1,32 +1,42 @@
 export interface CustomerIntelligenceRow {
   sNo: number | string
   customerCompanyName: string
-  businessOverview: string
-  customerTypeAndNetworkResponsibility: string
-  compositePoleApplicationUseCase: string
-  annualRevenueOrNetworkBudgetSignal: string
-  sizeOperatingScale: string
+  typeOfBusiness: string
+  primaryApplicationType: string
+  platformType: string
+  numberOfPropertiesManaged: string
+  numberOfBookingsProcessed: string
   keyContactPerson: string
-  designationDecisionMakerRole: string
+  designationRole: string
   emailAddress: string
-  telephoneWhatsappNumber: string
+  phoneWhatsappNumber: string
   linkedInProfile: string
-  website: string
-  compositePolePurchaseCriteria?: string
-  networkPainPoints?: string
-  gridComplianceAndOperationalIssues?: string
-  digitalMaturity?: string
-  riskExposure?: string
-  assetRenewalCycleAndBuyingTriggers?: string
-  budgetOwner?: string
-  procurementModel?: string
-  vendorSelectionCriteria?: string
-  preferredEngagementMode?: string
-  preferredDeploymentServiceContract?: string
-  preferredSolutionType?: string
-  integrationTechnicalServiceRequirement?: string
-  potentialCustomerDetails?: string
-  additionalCmiNotes?: string
+  websiteUrl: string
+  annualOnlineBookingSoftwareBudget?: string
+  preferredBookingModel?: string
+  averageImplementationTimeline?: string
+  currentBookingSoftwareUsageDuration?: string
+  keyPurchaseDrivers?: string
+  levelOfRenderingAutomation?: string
+  percentageOfProjectsUsingCloudRendering?: string
+  useOfAiOrGenerativeRenderingTools?: string
+  renderingWorkflowOptimizationToolsAdoption?: string
+  remoteCollaborationCloudRenderingCapability?: string
+  plannedRenderingCapacityExpansion?: string
+  expectedNewRenderingProjects?: string
+  newApplicationAreasPlanned?: string
+  newStudioOfficeExpansionPlanned?: string
+  customerBenchmarkingSummary?: string
+  additionalCommentsNotesByCmiTeam?: string
+  levelOfBookingAutomation?: string
+  percentageOfOnlineVsOfflineBookings?: string
+  useOfAiOrDynamicPricingTools?: string
+  integrationWithPaymentGatewaysPmsCrmOta?: string
+  mobileAppBookingCapability?: string
+  plannedExpansionOfBookingCapabilities?: string
+  expectedBookingVolumeGrowth?: string
+  newFeaturesPlanned?: string
+  customerSegmentsServed?: string
 }
 
 export interface CustomerIntelligenceProposition {
@@ -60,122 +70,132 @@ export interface TableColumn {
 }
 
 export const CUSTOMER_INFO_COLUMNS: TableColumn[] = [
-  { key: 'customerCompanyName', label: 'Customer / Company Name', headerClass: 'bg-[#FFF8DC]', minWidth: '180px' },
-  { key: 'businessOverview', label: 'Business Overview', headerClass: 'bg-[#FFF8DC]', minWidth: '150px' },
+  { key: 'customerCompanyName', label: 'Customer Name/Company Name', headerClass: 'bg-[#FFF8DC]', minWidth: '180px' },
+  { key: 'typeOfBusiness', label: 'Type of Business', headerClass: 'bg-[#FFF8DC]', minWidth: '150px' },
+  { key: 'primaryApplicationType', label: 'Primary Application Type', headerClass: 'bg-[#FFF8DC]', minWidth: '170px' },
+  { key: 'platformType', label: 'Platform Type', headerClass: 'bg-[#FFF8DC]', minWidth: '130px' },
   {
-    key: 'customerTypeAndNetworkResponsibility',
-    label: 'Customer Type and Network Responsibility',
+    key: 'numberOfPropertiesManaged',
+    label: 'Number of Properties/Hotels/Travel Services Managed',
     headerClass: 'bg-[#FFF8DC]',
-    minWidth: '200px',
+    minWidth: '220px',
   },
   {
-    key: 'compositePoleApplicationUseCase',
-    label: 'Composite Pole Application/Use Case',
+    key: 'numberOfBookingsProcessed',
+    label: 'Number of Daily/Monthly Bookings Processed',
     headerClass: 'bg-[#FFF8DC]',
-    minWidth: '180px',
-  },
-  {
-    key: 'annualRevenueOrNetworkBudgetSignal',
-    label: 'Annual Revenue in US$ Million/Network Budget Signal',
-    headerClass: 'bg-[#FFF8DC]',
-    minWidth: '200px',
-  },
-  { key: 'sizeOperatingScale', label: 'Size / Operating Scale', headerClass: 'bg-[#FFF8DC]', minWidth: '150px' },
-]
-
-export const CONTACT_COLUMNS: TableColumn[] = [
-  { key: 'keyContactPerson', label: 'Key Contact Person', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
-  {
-    key: 'designationDecisionMakerRole',
-    label: 'Designation / Decision-Maker Role',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '170px',
-  },
-  { key: 'emailAddress', label: 'Email Address', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'email' },
-  {
-    key: 'telephoneWhatsappNumber',
-    label: 'Telephone / WhatsApp Number',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '150px',
-  },
-  { key: 'linkedInProfile', label: 'LinkedIn Profile', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'url' },
-  { key: 'website', label: 'Website', headerClass: 'bg-[#B0E0E6]', minWidth: '130px', isLink: 'url' },
-]
-
-export const BUYING_DRIVERS_COLUMNS: TableColumn[] = [
-  {
-    key: 'compositePolePurchaseCriteria',
-    label: 'Composite Pole Purchase Criteria',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '180px',
-  },
-  { key: 'networkPainPoints', label: 'Network Pain Points', headerClass: 'bg-[#B0E0E6]', minWidth: '160px' },
-  {
-    key: 'gridComplianceAndOperationalIssues',
-    label: 'Grid Compliance and Operational Issues',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-  { key: 'digitalMaturity', label: 'Digital Maturity', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
-  { key: 'riskExposure', label: 'Risk Exposure', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
-]
-
-export const PURCHASING_BEHAVIOUR_COLUMNS: TableColumn[] = [
-  {
-    key: 'assetRenewalCycleAndBuyingTriggers',
-    label: 'Asset Renewal Cycle and Buying Triggers',
-    headerClass: 'bg-[#DDA0DD]',
-    minWidth: '200px',
-  },
-  { key: 'budgetOwner', label: 'Budget Owner', headerClass: 'bg-[#DDA0DD]', minWidth: '130px' },
-  { key: 'procurementModel', label: 'Procurement Model', headerClass: 'bg-[#DDA0DD]', minWidth: '150px' },
-  {
-    key: 'vendorSelectionCriteria',
-    label: 'Vendor Selection Criteria',
-    headerClass: 'bg-[#DDA0DD]',
-    minWidth: '170px',
-  },
-]
-
-export const SOLUTION_REQUIREMENTS_COLUMNS: TableColumn[] = [
-  {
-    key: 'preferredEngagementMode',
-    label: 'Preferred Engagement Mode',
-    headerClass: 'bg-[#DEB887]',
-    minWidth: '170px',
-  },
-  {
-    key: 'preferredDeploymentServiceContract',
-    label: 'Preferred Deployment / Service Contract',
-    headerClass: 'bg-[#DEB887]',
-    minWidth: '200px',
-  },
-  {
-    key: 'preferredSolutionType',
-    label: 'Preferred Solution Type',
-    headerClass: 'bg-[#DEB887]',
-    minWidth: '170px',
-  },
-  {
-    key: 'integrationTechnicalServiceRequirement',
-    label: 'Integration / Technical / Service Requirement',
-    headerClass: 'bg-[#DEB887]',
     minWidth: '220px',
   },
 ]
 
-export const CMI_INSIGHTS_COLUMNS: TableColumn[] = [
+export const CONTACT_COLUMNS: TableColumn[] = [
+  { key: 'keyContactPerson', label: 'Key Contact Person', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
+  { key: 'designationRole', label: 'Designation/Role', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
+  { key: 'emailAddress', label: 'Email Address', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'email' },
+  { key: 'phoneWhatsappNumber', label: 'Phone/WhatsApp Number', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
+  { key: 'linkedInProfile', label: 'LinkedIn Profile', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'url' },
+  { key: 'websiteUrl', label: 'Website URL', headerClass: 'bg-[#B0E0E6]', minWidth: '130px', isLink: 'url' },
+]
+
+export const PROCUREMENT_COLUMNS: TableColumn[] = [
   {
-    key: 'potentialCustomerDetails',
-    label: 'Potential Customer  Details',
+    key: 'annualOnlineBookingSoftwareBudget',
+    label: 'Annual Online Booking Software Budget (US$)',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '180px',
+    minWidth: '220px',
   },
   {
-    key: 'additionalCmiNotes',
-    label: 'Additional CMI Notes',
+    key: 'preferredBookingModel',
+    label: 'Preferred Booking Model (Cloud-Based / On-Premise / Hybrid)',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '180px',
+    minWidth: '260px',
+  },
+  {
+    key: 'averageImplementationTimeline',
+    label: 'Average Implementation Timeline (Weeks)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '200px',
+  },
+  {
+    key: 'currentBookingSoftwareUsageDuration',
+    label: 'Current Booking Software & Usage Duration (Years)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '240px',
+  },
+  {
+    key: 'keyPurchaseDrivers',
+    label: 'Key Purchase Drivers (Automation, Customer Experience, Mobile Booking, Channel Integration, AI Features)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '280px',
+  },
+]
+
+export const DIGITAL_ADOPTION_P3_COLUMNS: TableColumn[] = [
+  {
+    key: 'levelOfBookingAutomation',
+    label: 'Level of Booking Automation (Manual / Semi-Automated / Fully Automated)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '240px',
+  },
+  {
+    key: 'percentageOfOnlineVsOfflineBookings',
+    label: 'Percentage of Online vs Offline Bookings',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '200px',
+  },
+  {
+    key: 'useOfAiOrDynamicPricingTools',
+    label: 'Use of AI or Dynamic Pricing Tools (Yes or No)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '220px',
+  },
+  {
+    key: 'integrationWithPaymentGatewaysPmsCrmOta',
+    label: 'Integration with Payment Gateways / PMS / CRM / OTA Platforms',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '260px',
+  },
+  {
+    key: 'mobileAppBookingCapability',
+    label: 'Mobile App Booking Capability (Yes or No)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '200px',
+  },
+]
+
+export const FUTURE_DEMAND_P3_COLUMNS: TableColumn[] = [
+  {
+    key: 'plannedExpansionOfBookingCapabilities',
+    label: 'Planned Expansion of Booking Capabilities in Next 3 Years (%)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '260px',
+  },
+  {
+    key: 'expectedBookingVolumeGrowth',
+    label: 'Expected Booking Volume Growth in Next 3 Years',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '220px',
+  },
+  {
+    key: 'newFeaturesPlanned',
+    label: 'New Features Planned (AI Chatbot, Dynamic Packaging, Loyalty Programs, Multi-Language Support)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '280px',
+  },
+  {
+    key: 'customerSegmentsServed',
+    label: 'Customer Segments Served (Leisure, Corporate, Group Travel, Medical Tourism, etc.)',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '260px',
+  },
+]
+
+export const CMI_INSIGHTS_P3_COLUMNS: TableColumn[] = [
+  {
+    key: 'additionalCommentsNotesByCmiTeam',
+    label: 'Additional Comments/Notes by CMI Team',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '220px',
   },
 ]
 
@@ -196,26 +216,26 @@ export const PROPOSITION_TABLE_CONFIG: Record<'proposition1' | 'proposition2' | 
     groups: [
       { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
       { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Buying Drivers', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Procurement & Purchase Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
     ],
-    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...BUYING_DRIVERS_COLUMNS],
+    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...PROCUREMENT_COLUMNS],
   },
   proposition3: {
     groups: [
       { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
       { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Buying Drivers', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Purchasing Behaviour Metrics', colSpan: 4, headerClass: 'bg-[#9370DB] text-white' },
-      { label: 'Solution Requirements', colSpan: 4, headerClass: 'bg-[#D4A574]' },
-      { label: 'CMI Insights', colSpan: 2, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Procurement & Purchase Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Digital & Technology Adoption Metrics', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Future Demand & Expansion Metrics', colSpan: 4, headerClass: 'bg-[#87CEEB]' },
+      { label: 'CMI Insights', colSpan: 1, headerClass: 'bg-[#87CEEB]' },
     ],
     columns: [
       ...CUSTOMER_INFO_COLUMNS,
       ...CONTACT_COLUMNS,
-      ...BUYING_DRIVERS_COLUMNS,
-      ...PURCHASING_BEHAVIOUR_COLUMNS,
-      ...SOLUTION_REQUIREMENTS_COLUMNS,
-      ...CMI_INSIGHTS_COLUMNS,
+      ...PROCUREMENT_COLUMNS,
+      ...DIGITAL_ADOPTION_P3_COLUMNS,
+      ...FUTURE_DEMAND_P3_COLUMNS,
+      ...CMI_INSIGHTS_P3_COLUMNS,
     ],
   },
 }

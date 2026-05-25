@@ -1283,7 +1283,7 @@ export async function processJsonDataAsync(
             return value && typeof value === 'object' && !Array.isArray(value)
           })
           regions.forEach(region => {
-            if (!regionGeographies.includes(region) && !geographies.includes(region)) {
+            if (!regionGeographies.includes(region)) {
               regionGeographies.push(region)
             }
             // Extract countries under each region (second level keys, excluding the region name itself)
@@ -1359,12 +1359,13 @@ export async function processJsonDataAsync(
       return geographiesWithData.has(g)
     })
 
-    // Build geography dimension with full hierarchy
+    // Build geography dimension with full hierarchy (deduplicated)
+    const uniqueGeographies = [...new Set(filteredGeographies)]
     const geographyDimension: GeographyDimension = {
-      global: filteredGeographies.filter(g => !regionGeographies.includes(g) && !allCountries.includes(g)),
+      global: uniqueGeographies.filter(g => !regionGeographies.includes(g) && !allCountries.includes(g)),
       regions: regionGeographies,
       countries: regionToCountries,
-      all_geographies: filteredGeographies
+      all_geographies: uniqueGeographies
     }
 
     console.log(`Geography dimension built with ${geographies.length} geographies:`, geographies)
@@ -1472,9 +1473,9 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'Composite Utility Transmission Pole Market',
+      market_name: 'Central Africa Online Booking Software Market',
       market_type: 'Market Analysis',
-      industry: 'Healthcare & Pharmaceuticals',
+      industry: 'Travel & Hospitality Technology',
       years: allYears,
       start_year: startYear,
       base_year: baseYear,

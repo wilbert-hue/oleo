@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp, Info } from 'lucide-react'
 import {
   loadCustomerIntelligenceData,
   PROPOSITION_TABLE_CONFIG,
@@ -171,7 +171,14 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
       <div className="mb-6">
         <h2 className="text-xl font-bold text-black mb-2">{title || data.marketTitle}</h2>
         <p className="text-sm text-gray-700">{data.subtitle}</p>
-        <p className="text-xs text-gray-600 mt-1">{data.entityNote}</p>
+        {data.entityNote ? <p className="text-xs text-gray-600 mt-1">{data.entityNote}</p> : null}
+      </div>
+
+      <div className="mb-6 flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
+        <Info className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+        <p className="text-sm text-amber-900">
+          <span className="font-semibold">NOTE:</span> All the data in the dashboard is demo data. No real-world data is related to this.
+        </p>
       </div>
 
       {propositions.map(({ key, proposition }) => (

@@ -1,114 +1,147 @@
 const fs = require('fs');
 const path = require('path');
 
-// Years: 2021-2033
 const years = [2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033];
 
-// UK-only geography
-const GEOGRAPHIES = ['UK'];
+const REGION = 'Central Africa';
+const COUNTRIES = [
+  'Cameroon',
+  'Gabon',
+  'Equatorial Guinea',
+  'Chad',
+  'Central African Republic',
+  'Republic of the Congo',
+  'Angola',
+  'Rest of Central Africa',
+];
 
-// Utility transmission pole segment definitions with market share splits
+const countryShares = {
+  Cameroon: 0.22,
+  Gabon: 0.12,
+  'Equatorial Guinea': 0.06,
+  Chad: 0.1,
+  'Central African Republic': 0.08,
+  'Republic of the Congo': 0.14,
+  Angola: 0.2,
+  'Rest of Central Africa': 0.08,
+};
+
+// Segment definitions: flat { name: share } or hierarchical { parent: { share, children: { child: share } } }
 const segmentTypes = {
-  'By Reinforcement Material Type': {
-    'Glass Fiber Reinforced Polymer Poles': 0.45,
-    'Hybrid Fiber Reinforced Polymer Poles': 0.35,
-    'Other Advanced Composite Poles (Carbon Fiber, Basalt Fiber, Aramid Fiber, etc.)': 0.20,
+  'By Offering': {
+    hierarchical: true,
+    segments: {
+      Software: {
+        share: 0.58,
+        children: {
+          'Reservation & Booking Management Software': 0.28,
+          'Operations & Inventory Management Software': 0.24,
+          'Revenue & Commercial Management Software': 0.26,
+          'Analytics & Intelligence Software': 0.22,
+        },
+      },
+      Services: {
+        share: 0.42,
+        children: {
+          'Professional & Implementation Services': 0.35,
+          'Managed & Support Services': 0.38,
+          'Consulting & Advisory Services': 0.27,
+        },
+      },
+    },
   },
-  'By Structure Configuration': {
-    'Single-Pole Structures': 0.55,
-    'H-Frame Structures': 0.30,
-    'Multi-Pole Portal Structures': 0.15,
+  'By Deployment Model': {
+    hierarchical: false,
+    segments: {
+      'Cloud-based': 0.68,
+      'On-premise': 0.32,
+    },
   },
-  'By Support Method': {
-    'Self-Supporting Pole Structures': 0.70,
-    'Guyed Pole Structures': 0.30,
+  'By Booking Channel': {
+    hierarchical: false,
+    segments: {
+      'Direct Booking Channels': 0.42,
+      'Third-party Aggregator Channels': 0.38,
+      'API & Partner Distribution Channels': 0.2,
+    },
   },
-  'By Pole Line Function': {
-    'Tangent Utility Poles': 0.40,
-    'Angle Utility Poles': 0.25,
-    'Dead-End and Anchor Utility Poles': 0.20,
-    'Terminal and Take-Off Utility Poles': 0.15,
+  'By Revenue Model': {
+    hierarchical: false,
+    segments: {
+      'Commission-Based Model': 0.28,
+      'Subscription-Based Model': 0.32,
+      'Transaction Fee Model': 0.18,
+      'Freemium Model': 0.12,
+      'Enterprise Licensing Model': 0.1,
+    },
   },
-  'By High-Voltage Transmission Poles': {
-    '69 kV to 230 kV': 0.75,
-    'Above 230 kV': 0.25,
+  'By Organization Size': {
+    hierarchical: false,
+    segments: {
+      'Small Businesses': 0.34,
+      'Medium-sized Businesses': 0.38,
+      'Large Enterprises': 0.28,
+    },
   },
-  'By Installation Type': {
-    'New Transmission Line Construction': 0.60,
-    'Transmission Pole Replacement and Retrofit': 0.40,
-  },
-  'By Operating Environment': {
-    'Normal Inland Transmission Corridors': 0.35,
-    'Coastal and Corrosion-Prone Transmission Corridors': 0.15,
-    'High-Wind and Storm-Prone Transmission Corridors': 0.25,
-    'Wildfire-Prone Transmission Corridors': 0.05,
-    'Remote and Difficult-Terrain Transmission Corridors': 0.20,
-  },
-  'By Customer Type': {
-    'Electric Transmission Utilities': 0.35,
-    'Transmission System Operators': 0.25,
-    'EPC and Grid Infrastructure Contractors': 0.20,
-    'Industrial Power Network Owners': 0.10,
-    'Government and Public Transmission Agencies': 0.10,
+  'By Booking Type': {
+    hierarchical: true,
+    segments: {
+      'Accommodation Booking': {
+        share: 0.22,
+        children: {
+          'Hotel Room Booking': 0.32,
+          'Resort Booking': 0.18,
+          'Vacation Rental Booking': 0.24,
+          'Hostel & Guesthouse Booking': 0.12,
+          'Others (Serviced Apartment Booking, etc.)': 0.14,
+        },
+      },
+      'Food Service Booking': {
+        share: 0.14,
+        children: {
+          'Restaurant Table Reservation Booking': 0.45,
+          'Café Reservation Booking': 0.28,
+          'Others (Banquet & Dining Reservation Booking, etc.)': 0.27,
+        },
+      },
+      'Travel & Transportation Booking': {
+        share: 0.2,
+        children: {
+          'Airline Ticket Booking': 0.35,
+          'Tour & Activity Booking': 0.28,
+          'Cruise Booking': 0.15,
+          'Others (Vehicle Rental Booking, etc.)': 0.22,
+        },
+      },
+      'Healthcare & Wellness Booking': {
+        share: 0.12,
+        children: {
+          'Diagnostic Appointment Booking': 0.4,
+          'Spa & Wellness Booking': 0.35,
+          'Others (Fitness Session Booking, etc.)': 0.25,
+        },
+      },
+      'Entertainment & Event Booking': {
+        share: 0.18,
+        children: {
+          'Event Ticket Booking': 0.32,
+          'Cinema & Theatre Booking': 0.28,
+          'Theme Park Booking': 0.22,
+          'Others (Venue Reservation Booking, etc.)': 0.18,
+        },
+      },
+      'Others (Sports & Recreation Booking, Commercial & Professional Booking, etc.)': {
+        share: 0.14,
+        children: null,
+      },
+    },
   },
 };
 
-// UK base market value (USD Million) for 2021
-const ukBaseValue = 185;
+const regionBaseValue = 420;
+const regionGrowthRate = 0.115;
+const volumePerMillionUSD = 1850;
 
-// UK market CAGR
-const ukGrowthRate = 0.082;
-
-// Segment-specific growth multipliers (relative to UK base CAGR)
-const segmentGrowthMultipliers = {
-  'By Reinforcement Material Type': {
-    'Glass Fiber Reinforced Polymer Poles': 1.08,
-    'Hybrid Fiber Reinforced Polymer Poles': 1.12,
-    'Other Advanced Composite Poles (Carbon Fiber, Basalt Fiber, Aramid Fiber, etc.)': 1.18,
-  },
-  'By Structure Configuration': {
-    'Single-Pole Structures': 0.98,
-    'H-Frame Structures': 1.05,
-    'Multi-Pole Portal Structures': 1.10,
-  },
-  'By Support Method': {
-    'Self-Supporting Pole Structures': 1.02,
-    'Guyed Pole Structures': 0.95,
-  },
-  'By Pole Line Function': {
-    'Tangent Utility Poles': 0.96,
-    'Angle Utility Poles': 1.04,
-    'Dead-End and Anchor Utility Poles': 1.06,
-    'Terminal and Take-Off Utility Poles': 1.10,
-  },
-  'By High-Voltage Transmission Poles': {
-    '69 kV to 230 kV': 1.05,
-    'Above 230 kV': 1.15,
-  },
-  'By Installation Type': {
-    'New Transmission Line Construction': 1.12,
-    'Transmission Pole Replacement and Retrofit': 0.92,
-  },
-  'By Operating Environment': {
-    'Normal Inland Transmission Corridors': 0.95,
-    'Coastal and Corrosion-Prone Transmission Corridors': 1.08,
-    'High-Wind and Storm-Prone Transmission Corridors': 1.10,
-    'Wildfire-Prone Transmission Corridors': 1.05,
-    'Remote and Difficult-Terrain Transmission Corridors': 1.12,
-  },
-  'By Customer Type': {
-    'Electric Transmission Utilities': 1.02,
-    'Transmission System Operators': 1.06,
-    'EPC and Grid Infrastructure Contractors': 1.10,
-    'Industrial Power Network Owners': 1.08,
-    'Government and Public Transmission Agencies': 1.04,
-  },
-};
-
-// Volume multiplier: units per USD Million
-const volumePerMillionUSD = 520;
-
-// Seeded pseudo-random for reproducibility
 let seed = 42;
 function seededRandom() {
   seed = (seed * 16807 + 0) % 2147483647;
@@ -137,54 +170,142 @@ function generateTimeSeries(baseValue, growthRate, roundFn) {
   return series;
 }
 
-function generateData(isVolume) {
-  const data = {};
+function generateFlatSegments(baseValue, segments, roundFn) {
+  const result = {};
+  for (const [name, share] of Object.entries(segments)) {
+    const segGrowth = regionGrowthRate * (0.88 + seededRandom() * 0.24);
+    const shareVariation = 1 + (seededRandom() - 0.5) * 0.08;
+    const segBase = baseValue * share * shareVariation;
+    result[name] = generateTimeSeries(segBase, segGrowth, roundFn);
+  }
+  return result;
+}
+
+function generateHierarchicalSegments(baseValue, segments, roundFn) {
+  const result = {};
+  for (const [parentName, config] of Object.entries(segments)) {
+    const parentShare = config.share;
+    const parentGrowth = regionGrowthRate * (0.9 + seededRandom() * 0.2);
+    const parentBase = baseValue * parentShare * (1 + (seededRandom() - 0.5) * 0.06);
+    const parentSeries = generateTimeSeries(parentBase, parentGrowth, roundFn);
+
+    if (!config.children) {
+      result[parentName] = parentSeries;
+      continue;
+    }
+
+    result[parentName] = { ...parentSeries };
+    for (const [childName, childShare] of Object.entries(config.children)) {
+      const childGrowth = regionGrowthRate * (0.85 + seededRandom() * 0.28);
+      const childBase = parentBase * childShare * (1 + (seededRandom() - 0.5) * 0.06);
+      result[parentName][childName] = generateTimeSeries(childBase, childGrowth, roundFn);
+    }
+  }
+  return result;
+}
+
+function generateSegmentTypeData(baseValue, segmentConfig, roundFn) {
+  if (segmentConfig.hierarchical) {
+    return generateHierarchicalSegments(baseValue, segmentConfig.segments, roundFn);
+  }
+  return generateFlatSegments(baseValue, segmentConfig.segments, roundFn);
+}
+
+function generateGeographyData(geoBaseValue, isVolume) {
   const roundFn = isVolume ? roundToInt : roundTo1;
   const multiplier = isVolume ? volumePerMillionUSD : 1;
+  const baseValue = geoBaseValue * multiplier;
+  const geoData = {};
 
-  for (const geography of GEOGRAPHIES) {
-    data[geography] = {};
-    const geoBase = ukBaseValue * multiplier;
+  for (const [segType, config] of Object.entries(segmentTypes)) {
+    geoData[segType] = generateSegmentTypeData(baseValue, config, roundFn);
+  }
 
-    for (const [segType, segments] of Object.entries(segmentTypes)) {
-      data[geography][segType] = {};
-      for (const [segName, share] of Object.entries(segments)) {
-        const segGrowth = ukGrowthRate * segmentGrowthMultipliers[segType][segName];
-        const shareVariation = 1 + (seededRandom() - 0.5) * 0.08;
-        const segBase = geoBase * share * shareVariation;
-        data[geography][segType][segName] = generateTimeSeries(segBase, segGrowth, roundFn);
-      }
-    }
+  return geoData;
+}
+
+function buildByRegionData(isVolume) {
+  const roundFn = isVolume ? roundToInt : roundTo1;
+  const multiplier = isVolume ? volumePerMillionUSD : 1;
+  const regionTotal = generateTimeSeries(regionBaseValue * multiplier, regionGrowthRate, roundFn);
+  const byRegion = { ...regionTotal };
+
+  for (const country of COUNTRIES) {
+    const countryBase = regionBaseValue * countryShares[country] * multiplier;
+    const countryGrowth = regionGrowthRate * (0.92 + seededRandom() * 0.18);
+    byRegion[country] = generateTimeSeries(countryBase, countryGrowth, roundFn);
+  }
+
+  return { [REGION]: byRegion };
+}
+
+function generateData(isVolume) {
+  const data = {};
+
+  data[REGION] = generateGeographyData(regionBaseValue, isVolume);
+  data[REGION]['By Region'] = buildByRegionData(isVolume);
+
+  for (const country of COUNTRIES) {
+    const countryBase = regionBaseValue * countryShares[country];
+    data[country] = generateGeographyData(countryBase, isVolume);
   }
 
   return data;
 }
 
-function buildSegmentationAnalysis() {
-  const analysis = { Global: {} };
-
-  for (const [segType, segments] of Object.entries(segmentTypes)) {
-    analysis.Global[segType] = {};
-    for (const segName of Object.keys(segments)) {
-      analysis.Global[segType][segName] = {};
+function buildEmptyStructure(node) {
+  if (node.hierarchical) {
+    const result = {};
+    for (const [parentName, config] of Object.entries(node.segments)) {
+      if (!config.children) {
+        result[parentName] = {};
+      } else {
+        result[parentName] = {};
+        for (const childName of Object.keys(config.children)) {
+          result[parentName][childName] = {};
+        }
+      }
     }
+    return result;
   }
 
-  analysis.Global['By Region'] = {
-    UK: {},
+  const result = {};
+  for (const segName of Object.keys(node.segments)) {
+    result[segName] = {};
+  }
+  return result;
+}
+
+function buildSegmentationAnalysis() {
+  const analysis = {};
+
+  const regionStructure = {};
+  for (const [segType, config] of Object.entries(segmentTypes)) {
+    regionStructure[segType] = buildEmptyStructure(config);
+  }
+
+  regionStructure['By Region'] = {
+    [REGION]: Object.fromEntries(COUNTRIES.map((country) => [country, {}])),
   };
+
+  analysis[REGION] = regionStructure;
+
+  for (const country of COUNTRIES) {
+    analysis[country] = {};
+    for (const [segType, config] of Object.entries(segmentTypes)) {
+      analysis[country][segType] = buildEmptyStructure(config);
+    }
+  }
 
   return analysis;
 }
 
-// Generate both datasets
 seed = 42;
 const valueData = generateData(false);
 seed = 7777;
 const volumeData = generateData(true);
 const segmentationAnalysis = buildSegmentationAnalysis();
 
-// Write files
 const outDir = path.join(__dirname, 'public', 'data');
 fs.writeFileSync(path.join(outDir, 'value.json'), JSON.stringify(valueData, null, 2));
 fs.writeFileSync(path.join(outDir, 'volume.json'), JSON.stringify(volumeData, null, 2));
@@ -192,8 +313,8 @@ fs.writeFileSync(path.join(outDir, 'segmentation_analysis.json'), JSON.stringify
 
 console.log('Generated value.json, volume.json, and segmentation_analysis.json successfully');
 console.log('Geographies:', Object.keys(valueData));
-console.log('Segment types:', Object.keys(valueData.UK));
+console.log('Segment types:', Object.keys(valueData[REGION]).filter((k) => k !== 'By Region'));
 console.log(
-  'Sample - UK, By Reinforcement Material Type:',
-  JSON.stringify(valueData.UK['By Reinforcement Material Type'], null, 2)
+  'Sample - Central Africa, By Offering:',
+  JSON.stringify(valueData[REGION]['By Offering'], null, 2).slice(0, 500)
 );

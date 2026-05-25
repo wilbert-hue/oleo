@@ -3,43 +3,48 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 const EXCEL_FILE =
-  'Sample Framework_Customer Database_U.K. Composite Utility Transmission Pole Market.xlsx';
+  'Sample Framework_Customer Database_Central Africa Online Booking System Market.xlsx';
 const OUTPUT_FILE = path.join(__dirname, 'public', 'data', 'customer-intelligence.json');
 
 const PROP1_COLS = [
   'customerCompanyName',
-  'businessOverview',
-  'customerTypeAndNetworkResponsibility',
-  'compositePoleApplicationUseCase',
-  'annualRevenueOrNetworkBudgetSignal',
-  'sizeOperatingScale',
+  'typeOfBusiness',
+  'primaryApplicationType',
+  'platformType',
+  'numberOfPropertiesManaged',
+  'numberOfBookingsProcessed',
   'keyContactPerson',
-  'designationDecisionMakerRole',
+  'designationRole',
   'emailAddress',
-  'telephoneWhatsappNumber',
+  'phoneWhatsappNumber',
   'linkedInProfile',
-  'website',
+  'websiteUrl',
 ];
 
 const PROP2_EXTRA = [
-  'compositePolePurchaseCriteria',
-  'networkPainPoints',
-  'gridComplianceAndOperationalIssues',
-  'digitalMaturity',
-  'riskExposure',
+  'annualOnlineBookingSoftwareBudget',
+  'preferredBookingModel',
+  'averageImplementationTimeline',
+  'currentBookingSoftwareUsageDuration',
+  'keyPurchaseDrivers',
 ];
 
 const PROP3_EXTRA = [
-  'assetRenewalCycleAndBuyingTriggers',
-  'budgetOwner',
-  'procurementModel',
-  'vendorSelectionCriteria',
-  'preferredEngagementMode',
-  'preferredDeploymentServiceContract',
-  'preferredSolutionType',
-  'integrationTechnicalServiceRequirement',
-  'potentialCustomerDetails',
-  'additionalCmiNotes',
+  'annualOnlineBookingSoftwareBudget',
+  'preferredBookingModel',
+  'averageImplementationTimeline',
+  'currentBookingSoftwareUsageDuration',
+  'keyPurchaseDrivers',
+  'levelOfBookingAutomation',
+  'percentageOfOnlineVsOfflineBookings',
+  'useOfAiOrDynamicPricingTools',
+  'integrationWithPaymentGatewaysPmsCrmOta',
+  'mobileAppBookingCapability',
+  'plannedExpansionOfBookingCapabilities',
+  'expectedBookingVolumeGrowth',
+  'newFeaturesPlanned',
+  'customerSegmentsServed',
+  'additionalCommentsNotesByCmiTeam',
 ];
 
 function parseSheet(wb, sheetName, extraColsAfterBase = []) {
@@ -67,14 +72,13 @@ function main() {
   const wb = XLSX.readFile(EXCEL_FILE);
 
   const output = {
-    marketTitle: 'U.K. Composite Utility Transmission Pole Market - Customer Database',
+    marketTitle: 'Central Africa Online Booking System Market - Customer Database',
     subtitle: 'Verified directory and insight on customers',
-    entityNote:
-      '(Entity Across Electric Transmission Utilities, Transmission System Operators, EPC and Grid Infrastructure Contractors, Industrial Power Network Owners, Government and Public Transmission Agencies)',
+    entityNote: '',
     proposition1: {
       id: 'proposition-1',
-      label: 'Proposition 1 - Basic',
-      ...parseSheet(wb, 'Proposition 1 - Basic'),
+      label: 'Proposition 1 - Standard',
+      ...parseSheet(wb, 'Proposition 1 - Standard'),
     },
     proposition2: {
       id: 'proposition-2',
@@ -84,7 +88,7 @@ function main() {
     proposition3: {
       id: 'proposition-3',
       label: 'Proposition 3 - Premium',
-      ...parseSheet(wb, 'Proposition 3 - Premium', [...PROP2_EXTRA, ...PROP3_EXTRA]),
+      ...parseSheet(wb, 'Proposition 3 - Premium', PROP3_EXTRA),
     },
   };
 

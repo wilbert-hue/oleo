@@ -38,10 +38,11 @@ export function GeographyMultiSelect() {
     const globalItems = geo.global || []
     const regions = geo.regions || []
     const countries = geo.countries || {}
-    const hasHierarchy = regions.length > 0
-    const flatOptions = geo.all_geographies || []
+    const displayRegions = regions.length > 0 ? regions : Object.keys(countries)
+    const hasHierarchy = displayRegions.length > 0
+    const flatOptions = [...new Set(geo.all_geographies || [])]
 
-    return { globalItems, regions, countries, hasHierarchy, flatOptions }
+    return { globalItems, regions: displayRegions, countries, hasHierarchy, flatOptions }
   }, [data])
 
   // Filter items based on search
