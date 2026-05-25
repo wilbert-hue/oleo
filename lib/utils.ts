@@ -94,13 +94,19 @@ export function calculateGrowth(startValue: number, endValue: number): number {
 }
 
 /**
- * Strip legacy "{Region} & " prefix from market title metadata.
- * e.g. "India & Global Botanical Ingredients Market" -> "Global Botanical Ingredients Market"
+ * Core market title without region or "Global" prefix.
+ * e.g. "India & Global Botanical Ingredients Market" -> "Botanical Ingredients Market"
  */
+export function getCoreMarketName(marketName: string): string {
+  let name = marketName.trim()
+  name = name.replace(/^[^|&]+?\s*&\s*/i, '').trim()
+  name = name.replace(/^Global\s+/i, '').trim()
+  return name || marketName.trim()
+}
+
+/** @deprecated Use getCoreMarketName */
 export function getBaseMarketName(marketName: string): string {
-  const trimmed = marketName.trim()
-  const withoutPrefix = trimmed.replace(/^[^|&]+?\s*&\s*/i, '').trim()
-  return withoutPrefix || trimmed
+  return getCoreMarketName(marketName)
 }
 
 /** Build KPI/header geography label from selected regions and market metadata name. */
@@ -108,17 +114,19 @@ export function buildGeographyMarketLabel(
   marketName: string,
   selectedGeographies: string[]
 ): string {
-  const base = getBaseMarketName(marketName)
+  const core = getCoreMarketName(marketName)
   const geos = selectedGeographies.filter((g) => g !== 'Global')
 
-  if (geos.length === 0) return base
+  if (geos.length === 0) {
+    return `Global ${core}`
+  }
   if (geos.length === 1) {
     const geo = geos[0]
-    if (base.toLowerCase().startsWith(geo.toLowerCase())) {
-      return base
+    if (geo.toLowerCase() === 'india') {
+      return `India & Global ${core}`
     }
-    return `${geo} ${base}`
+    return `${geo} ${core}`
   }
-  return `${geos.length} Geographies | ${base}`
+  return `${geos.length} Geographies | Global ${core}`
 }
 
