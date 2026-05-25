@@ -1,63 +1,49 @@
 {
   "Global": {
-    "By Type": {
-      "Sub-Normothermic Perfusion (20–34°C)": {},
-      "Warm or Normothermic Perfusion (35–37°C)": {}
+    "By Reinforcement Material Type": {
+      "Glass Fiber Reinforced Polymer Poles": {},
+      "Hybrid Fiber Reinforced Polymer Poles": {},
+      "Other Advanced Composite Poles (Carbon Fiber, Basalt Fiber, Aramid Fiber, etc.)": {}
     },
-    "By Organ Type": {
-      "Liver": {},
-      "Heart": {},
-      "Lung": {},
-      "Kidney": {},
-      "Others (Pancreas, Small bowel / Intestine, Composite Tissues / Limb Perfusion (emerging use cases))": {}
+    "By Structure Configuration": {
+      "Single-Pole Structures": {},
+      "H-Frame Structures": {},
+      "Multi-Pole Portal Structures": {}
     },
-    "Application / Use Case": {
-      "Organ Preservation": {},
-      "Viability Assessment": {},
-      "Physiologic Transport": {},
-      "Reconditioning Marginal Organs": {},
-      "Others (Research Use / Protocol development)": {}
+    "By Support Method": {
+      "Self-Supporting Pole Structures": {},
+      "Guyed Pole Structures": {}
     },
-    "By End User": {
-      "Hospitals & Clinics": {},
-      "Specialty Clinic/Centers": {},
-      "Transplant Centers": {},
-      "Others (Research Institutes/Centers, Organ Procurement Organizations, etc.)": {}
+    "By Pole Line Function": {
+      "Tangent Utility Poles": {},
+      "Angle Utility Poles": {},
+      "Dead-End and Anchor Utility Poles": {},
+      "Terminal and Take-Off Utility Poles": {}
+    },
+    "By High-Voltage Transmission Poles": {
+      "69 kV to 230 kV": {},
+      "Above 230 kV": {}
+    },
+    "By Installation Type": {
+      "New Transmission Line Construction": {},
+      "Transmission Pole Replacement and Retrofit": {}
+    },
+    "By Operating Environment": {
+      "Normal Inland Transmission Corridors": {},
+      "Coastal and Corrosion-Prone Transmission Corridors": {},
+      "High-Wind and Storm-Prone Transmission Corridors": {},
+      "Wildfire-Prone Transmission Corridors": {},
+      "Remote and Difficult-Terrain Transmission Corridors": {}
+    },
+    "By Customer Type": {
+      "Electric Transmission Utilities": {},
+      "Transmission System Operators": {},
+      "EPC and Grid Infrastructure Contractors": {},
+      "Industrial Power Network Owners": {},
+      "Government and Public Transmission Agencies": {}
     },
     "By Region": {
-      "North America": {
-        "U.S.": {},
-        "Canada": {}
-      },
-      "Europe": {
-        "U.K.": {},
-        "Germany": {},
-        "Italy": {},
-        "France": {},
-        "Spain": {},
-        "Russia": {},
-        "Rest of Europe": {}
-      },
-      "Asia Pacific": {
-        "China": {},
-        "India": {},
-        "Japan": {},
-        "South Korea": {},
-        "ASEAN": {},
-        "Australia": {},
-        "Rest of Asia Pacific": {}
-      },
-      "Latin America": {
-        "Brazil": {},
-        "Argentina": {},
-        "Mexico": {},
-        "Rest of Latin America": {}
-      },
-      "Middle East & Africa": {
-        "GCC": {},
-        "South Africa": {},
-        "Rest of Middle East & Africa": {}
-      }
+      "UK": {}
     }
   }
 }
