@@ -93,3 +93,32 @@ export function calculateGrowth(startValue: number, endValue: number): number {
   return ((endValue - startValue) / startValue) * 100
 }
 
+/**
+ * Strip legacy "{Region} & " prefix from market title metadata.
+ * e.g. "India & Global Botanical Ingredients Market" -> "Global Botanical Ingredients Market"
+ */
+export function getBaseMarketName(marketName: string): string {
+  const trimmed = marketName.trim()
+  const withoutPrefix = trimmed.replace(/^[^|&]+?\s*&\s*/i, '').trim()
+  return withoutPrefix || trimmed
+}
+
+/** Build KPI/header geography label from selected regions and market metadata name. */
+export function buildGeographyMarketLabel(
+  marketName: string,
+  selectedGeographies: string[]
+): string {
+  const base = getBaseMarketName(marketName)
+  const geos = selectedGeographies.filter((g) => g !== 'Global')
+
+  if (geos.length === 0) return base
+  if (geos.length === 1) {
+    const geo = geos[0]
+    if (base.toLowerCase().startsWith(geo.toLowerCase())) {
+      return base
+    }
+    return `${geo} ${base}`
+  }
+  return `${geos.length} Geographies | ${base}`
+}
+

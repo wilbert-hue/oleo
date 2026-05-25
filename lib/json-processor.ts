@@ -1520,7 +1520,7 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'India & Global Botanical Ingredients Market',
+      market_name: 'Global Botanical Ingredients Market',
       market_type: 'Market Analysis',
       industry: 'Food & Agriculture',
       years: allYears,

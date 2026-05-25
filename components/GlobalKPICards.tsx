@@ -3,7 +3,12 @@
 import { useMemo } from 'react'
 import { useDashboardStore } from '@/lib/store'
 import { TrendingUp, DollarSign, Calendar, Activity } from 'lucide-react'
-import { formatIndianNumber, formatIndianNumberWithCommas, formatCurrencyValue } from '@/lib/utils'
+import {
+  formatIndianNumber,
+  formatIndianNumberWithCommas,
+  formatCurrencyValue,
+  buildGeographyMarketLabel,
+} from '@/lib/utils'
 
 export function GlobalKPICards() {
   const { data, filters, currency } = useDashboardStore()
@@ -151,23 +156,8 @@ export function GlobalKPICards() {
         : allAvailableGeographies
     const dataTypeLabel = filters.dataType === 'value' ? 'Market Size' : 'Market Volume'
 
-    // Get market name from metadata
     const marketName = data.metadata.market_name || 'Market'
-
-    const geographyLabel = (() => {
-      if (displayGeographies.length === 0) return marketName
-      if (displayGeographies.length === 1) {
-        const geo = displayGeographies[0]
-        const marketLower = marketName.toLowerCase()
-        const geoLower = geo.toLowerCase()
-        // Avoid "India India & ..." when market name already starts with the selected geography
-        if (marketLower.startsWith(geoLower)) {
-          return marketName
-        }
-        return `${geo} ${marketName}`
-      }
-      return `${displayGeographies.length} Geographies | ${marketName}`
-    })()
+    const geographyLabel = buildGeographyMarketLabel(marketName, displayGeographies)
     const segmentTypeLabel = targetSegmentType || 'All Segments'
 
     return {
